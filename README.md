@@ -40,20 +40,51 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 //Bind the socket to the IP address and port
 server_socket.bind((SERVER_IP, SERVER_PORT))
 
-print("Server is listening on {}:{}".format(SERVER_IP, SERVER_PORT))
+print("UDP server is running on {}:{}".format(SERVER_IP, SERVER_PORT))
 
-//Handle incoming messages
+//Receive messages from clients
 while True:
-    //Receive data from client
+    # Receive message and client address
     message, client_address = server_socket.recvfrom(1024)
     
-    print("Connection established with:", client_address)
-    print("Message from client:", message.decode())
+// Print the received message and client address
+    print("Received message from {}: {}".format(client_address, message.decode()))
     
-    //Send acknowledgment to client
-    response = "Message received"
+// Acknowledge the receipt of the message
+    response = "Message received by server"
     server_socket.sendto(response.encode(), client_address)
 
-//Close the socket (unreachable code in this infinite loop example)
-server_socket.close()
+// Welcome message for the client
+    print("Welcome UDP client at {}".format(client_address))
+//close socket
+    server_socket.close();
+```  
+## Client code  
+-----------------------------------------------------  
 ```
+import socket
+
+//Define the server IP address and port
+SERVER_IP = "192.168.0.108"
+SERVER_PORT = 4010
+
+//Create a UDP socket
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+//Send messages to the server
+while True:
+    message = input("Enter message to send to server (type 'exit' to quit): ")
+    if message.lower() == 'exit':
+        break
+    
+// Send message to server
+    client_socket.sendto(message.encode(), (SERVER_IP, SERVER_PORT))
+    
+// Receive acknowledgment from server
+    response, server_address = client_socket.recvfrom(1024)
+    print("Server response:", response.decode())
+
+//Close the socket
+client_socket.close()
+```
+
