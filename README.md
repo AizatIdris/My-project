@@ -5,7 +5,15 @@
 ## `What is socket programming?`  
 One method of establishing a communication channel between two nodes on a network is using socket programming. As one socket (node) reaches out to the other to establish a connection, the other socket listens on a specific port at an IP. As the client connects to the server, the server creates the listener socket.  
 
-# Server Code  
+### Element in Socket Programming  
+* socket() - `Command to create socket`. It requires arguments that define the protocol (often 0 by default), socket type (like SOCK_DGRAM for UDP or SOCK_STREAM for TCP), and address family (like AF_INET for IPv4).
+* bind() -  `Command to associate a socket with a specific IP address and port number`. It is typically used by servers to bind to a well-known port so that clients can connect to it.
+* listen() - `Comamand to put socket into listening mode`. This command is used in server code.
+* connect() - 
+
+
+
+## Server Code  
 ----------------------------------------------------------------------  
 
 ```
