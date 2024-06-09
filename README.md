@@ -52,7 +52,7 @@ while True:
     print(f"Acknowledgment sent to {client_address}")
 
 
-```  
+```    
 ## Client code  
 -----------------------------------------------------  
 ```
@@ -82,4 +82,6 @@ while True:
 client_socket.close()
 
 ```
+### SAMPLE INPUT OUTPUT
+
 
