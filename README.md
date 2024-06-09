@@ -83,8 +83,24 @@ client_socket.close()
 
 ```
 ### SAMPLE INPUT OUTPUT  
+---------------------------------------------------------------  
 
- Server.py
+ `Server.py `  
+ 
+ ![git1copy](https://github.com/AizatIdris/My-project/assets/166004721/3112cf52-67ad-45fa-88eb-11b15f2a0e23)  
+ `Client.py`  
+ 
+ ![git2copy](https://github.com/AizatIdris/My-project/assets/166004721/3cdbfc1e-8dd7-433b-8491-68ccd5c3b7d7)  
+ `Input Client.py`  
+ 
+![git3copy](https://github.com/AizatIdris/My-project/assets/166004721/44abd43c-565c-4aee-b30f-a8e630725d76)  
+`Output Server.py`  
+
+![git4copy](https://github.com/AizatIdris/My-project/assets/166004721/890edf2d-32e2-4e06-9fae-1e75d149f76b)  
+
+### VIDEO DEMONSTRATION  
+
+
 
 
 
