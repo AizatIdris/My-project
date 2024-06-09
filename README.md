@@ -83,5 +83,6 @@ client_socket.close()
 
 ```
 ### SAMPLE INPUT OUTPUT
+![git1](https://github.com/AizatIdris/My-project/assets/166004721/f85a9861-da19-4c30-ac1b-96d05a15674a) 
 
 
